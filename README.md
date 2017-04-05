@@ -15,9 +15,9 @@ pip install package 可直接安装
 
 1. preprocess.py
 
-训练集，测试集，预测集数据准备
-结巴分词，增加自定义字典
-统计单词频度，去掉低频词语
+训练集，测试集，预测集数据准备；
+结巴分词，增加自定义字典；
+统计单词频度，去掉低频词语；
 
 2. classify.py
 
@@ -29,9 +29,9 @@ pip install package 可直接安装
 
 4. 目录
 
-data目录，所有原始数据目录
-middle目录，所有中间数据目录
-result目录，所有结果数据目录
+data目录，所有原始数据目录；
+middle目录，所有中间数据目录；
+result目录，所有结果数据目录；
 
 5. run.sh
 
