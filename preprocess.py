@@ -10,7 +10,7 @@ import jieba.analyse
 import numpy as np
 
 #topk = 7000
-topk = 9000
+topk = 500
 
 stop_words = set()
 global_words = dict()
@@ -21,7 +21,7 @@ tags_words = dict()
 jieba_userdict_filename = "./data/user.dict"
 jieba_stopwords_filename = "./data/stop_words.dict"
 test_dataset_filename = "./data/test.data"
-predict_dataset_filename = "./data/unknown_comment.data"
+predict_dataset_filename = "./data/predict.data"
 tags_words_filename = "./data/tags.words"
 
 train_dataset_filename = "./middle/train.txt"

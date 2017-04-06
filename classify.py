@@ -79,17 +79,10 @@ def predict_data_to_list(predict_data):
     return predict_list
 
 def calculate_correct_rate(classify, test_array, test_data, test_label):
-    predict_count = len(test_array)
-    succ_count = 0
-    for i in range(predict_count):
-        array = np.asarray(test_array[i])
-        l0 = classify.predict(array.reshape(1, -1))
-        if l0[0] == test_label[i]:
-            succ_count += 1
-        #    print "ok", test_label[i].encode("utf-8"), test_data[i].encode("utf-8")
-        #else:
-        #    print "error", test_label[i].encode("utf-8"), test_data[i].encode("utf-8")
-    print (succ_count * 1.0) / predict_count
+    predict_array = classify.predict(test_array)
+    correct_rate = np.mean(predict_array == np.array(test_label))
+
+    print correct_rate
 
 def generate_predict_datasets(classify, predict_array, predict_data, outfile_file_name, no_proba = False):
     index = 0

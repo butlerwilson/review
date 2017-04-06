@@ -1,7 +1,7 @@
 #-*- coding:utf-8 -*-
 import sys
 
-per_sample_count = 600
+per_sample_count = 100
 global_train_data = dict()
 
 origin_train_filename = "./data/train.data"
