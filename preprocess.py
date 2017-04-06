@@ -11,7 +11,6 @@ import numpy as np
 
 #topk = 7000
 topk = 9000
-model = 2
 
 stop_words = set()
 global_words = dict()
@@ -52,7 +51,6 @@ def load_tags_words(input_file_name):
             tags_words[tag_name] = items[1:]
 
 def prepare_origin_datasets(input_file_name, is_test = False):
-    global model
     origin_data = dict()
     origin_data["ori"] = dict()
     origin_data["ori"]["samples"] = list()
@@ -60,12 +58,9 @@ def prepare_origin_datasets(input_file_name, is_test = False):
     with open(input_file_name, "r") as infile:
         for line in infile:
             data_list = line.strip().decode("utf-8").split("\t")
-            if len(data_list) != 3: continue
-            comment = data_list[2]
-            if model == 1:
-                label = data_list[0];
-            else:
-                label = data_list[1];
+            if len(data_list) != 2: continue
+            comment = data_list[1]
+            label = data_list[0];
             origin_data["ori"]["labels"].append(label)
             if is_test == True:
                 origin_data["ori"]["samples"].append(comment)

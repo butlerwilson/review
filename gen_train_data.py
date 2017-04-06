@@ -12,8 +12,8 @@ def load_train_data(input_file_name):
         for line in f:
             try:
                 items = line.strip().decode("utf-8").split("\t")
-                label = items[0] + "\t" + items[1]
-                sample = items[2]
+                label = items[0]
+                sample = items[1]
                 if label not in global_train_data.keys():
                     global_train_data[label] = []
                 global_train_data[label].append(sample)

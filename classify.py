@@ -18,7 +18,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.feature_extraction.text import HashingVectorizer
 
-model = 2
 is_test = False
 
 global_tags =dict()
@@ -58,20 +57,11 @@ def load_dataset_from_file(input_file_name):
     return dataset
 
 def load_global_tags(input_file_name):
-    global model
     with open(input_file_name, "r") as f:
         for line in f:
             items = line.strip().decode("utf-8").split("\t")
-            if model == 1:
-                good_tag_name = items[2]
-                bad_tag_name = items[8]
-                if good_tag_name != "":
-                    good_tag_name += u"好"
-                if bad_tag_name != "":
-                    bad_tag_name += u"差"
-            else:
-                good_tag_name = items[3]
-                bad_tag_name = items[9]
+            good_tag_name = items[3]
+            bad_tag_name = items[9]
             good_tag_id = items[0]
             bad_tag_id = items[6]
             global_tags[good_tag_name] = dict({"id":good_tag_id, "attr":1})
