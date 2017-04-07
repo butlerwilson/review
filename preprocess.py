@@ -9,8 +9,7 @@ import jieba
 import jieba.analyse
 import numpy as np
 
-#topk = 7000
-topk = 500
+topk = 7000
 
 stop_words = set()
 global_words = dict()

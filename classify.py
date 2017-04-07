@@ -178,8 +178,8 @@ if __name__ == "__main__":
 
     predict_data_list = predict_data_to_list(predict_data)
 
-    train_array, test_array, predict_vectorizer = countVectorizer(train_samples, test_samples)
-    #train_array, test_array, predict_vectorizer = tfidfVectorizer(train_samples, test_samples)
+    #train_array, test_array, predict_vectorizer = countVectorizer(train_samples, test_samples)
+    train_array, test_array, predict_vectorizer = tfidfVectorizer(train_samples, test_samples)
     
     #svmp(predict_vectorizer, train_array, test_array, test_samples, test_labels, predict_samples, predict_data_list)
     bayesp(predict_vectorizer, train_array, test_array, test_samples, test_labels, predict_samples, predict_data_list)

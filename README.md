@@ -8,6 +8,7 @@
 2. sklearn
 3. jieba
 4. snownlp
+5. scipy
 
 pip install package 可直接安装
 
