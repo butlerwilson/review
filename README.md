@@ -41,6 +41,4 @@ result目录，所有结果数据目录；
 
 ## 相关技术博客分享
 
-[blog](http://www.milier.me)
-
 author: youngcy
